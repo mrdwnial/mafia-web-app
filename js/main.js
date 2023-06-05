@@ -1,5 +1,9 @@
+window.onload = function () {
+  setTimeout(function () {
+    window.scrollTo(0, 1);
+  }, 0);
+};
 const swiper = new Swiper(".swiper", {
-
   direction: "horizontal",
   loop: true,
 
@@ -13,13 +17,13 @@ const swiper = new Swiper(".swiper", {
     disableOnInteraction: false,
   },
 
-  effect: 'creative',
+  effect: "creative",
   creativeEffect: {
     prev: {
       translate: [0, 0, -400],
     },
     next: {
-      translate: ['100%', 0, 0],
+      translate: ["100%", 0, 0],
     },
   },
 });
