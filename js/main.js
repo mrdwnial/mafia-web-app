@@ -1,9 +1,22 @@
-window.addEventListener("load",function() {
-  setTimeout(function(){
-      // This hides the address bar:
-      window.scrollTo(0, 1);
-  }, 0);
-});
+const $ = document;
+
+// let navbarLogo = $.querySelector("nav img");
+// console.log(navbarLogo);
+// $.body.addEventListener("scroll", function (e) {
+//   if (this.scrollTop !== 0) {
+//     // console.log();
+//     navbarLogo.width = "50";
+//     navbarLogo.height = "50";
+//   } else{
+//     navbarLogo.width = "60";
+//     navbarLogo.height = "60";
+//   }
+// });
+
+function toggleMobileMenu() {
+  $.body.classList.toggle("disable-scroll");
+}
+
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
