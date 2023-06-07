@@ -1,17 +1,13 @@
 const $ = document;
 
-// let navbarLogo = $.querySelector("nav img");
-// console.log(navbarLogo);
-// $.body.addEventListener("scroll", function (e) {
-//   if (this.scrollTop !== 0) {
-//     // console.log();
-//     navbarLogo.width = "50";
-//     navbarLogo.height = "50";
-//   } else{
-//     navbarLogo.width = "60";
-//     navbarLogo.height = "60";
-//   }
-// });
+const loaderContainer = $.querySelector(".loader")
+
+window.addEventListener("load", function(){
+  this.setTimeout(function(){
+    loaderContainer.classList.add("d-none")
+  }, 1000)
+})
+
 
 function toggleMobileMenu() {
   $.body.classList.toggle("disable-scroll");
