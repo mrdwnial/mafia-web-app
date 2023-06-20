@@ -1,0 +1,26 @@
+.gameTerms-section .game-terms-advanced-titles{
+  color: #ff7f11;
+  font-family: DanaFaNum-ExtraBold;
+  user-select: none;
+}
+
+.gameTerms-section img{
+  border-radius: 50px;
+}
+
+.gameTerms-section .game-terms-Introduction{
+  font-weight: bold;
+}
+
+
+.gameTerms-section h2{
+  color: #ffb200;
+  user-select: none;
+}
+
+.gameTerms-section p {
+  font-size: 1.1em;
+  line-height: 2em;
+  text-align: justify;
+  color: #e9fff9;
+}

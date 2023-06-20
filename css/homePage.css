@@ -1,0 +1,86 @@
+.home-section-play-game {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home-section-play-game .home-section-play-game-img {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.home-section-play-game .home-section-play-game-text {
+  cursor: pointer;
+  color: #f66b0e;
+  font-family: DanaFaNum-ExtraBold;
+  font-size: 3em;
+  transition: 0.4s;
+  user-select: none;
+}
+.home-section-play-game .home-section-play-game-img:active,
+.home-section-play-game .home-section-play-game-text:active {
+  transition: 0.1s;
+  opacity: 0.7;
+}
+.home-section-play-game .home-section-play-game-text:hover {
+  text-shadow: 0 0 20px #f66b0e;
+}
+
+
+.home-section .home-section-content div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home-section .home-section-content div img {
+  cursor: pointer;
+  border: 2px solid #e9fff9;
+  box-shadow: 0 0 30px #003459;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+.home-section .home-section-content div h3 {
+  cursor: pointer;
+  text-align: center;
+  color: #e9fff9;
+  font-family: DanaFaNum-ExtraBold;
+  user-select: none;
+  transition: 0.4s;
+}
+
+.home-section-content div img:hover,
+.home-section-content div:has(h3:hover) img {
+  border: 2px solid #f66b0e;
+  box-shadow: 0 0 30px #f66b0e;
+}
+
+.home-section-content div h3:hover,
+.home-section-content div:has(img:hover) h3 {
+  color: #f66b0e;
+}
+
+.home-section-content div h3:active,
+.home-section-content div img:active,
+.home-section-content div:has(img:active) h3,
+.home-section-content div:has(h3:active) img {
+  transition: 0.1s;
+  opacity: 0.7;
+}
+
+
+.home-section .home-section-details-title {
+  user-select: none;
+  text-align: right;
+  color: #ffb200;
+  font-family: DanaFaNum-ExtraBold;
+}
+.home-section .home-section-details-text {
+  font-size: 1.1em;
+  line-height: 2em;
+  text-align: justify;
+  color: #e9fff9;
+}
+.home-section-details-img{
+}

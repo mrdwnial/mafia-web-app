@@ -1,145 +1,0 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>پلیر شو</title>
-
-    <link rel="icon" type="image/x-icon" href="./assets/image/favicion/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/image/favicion/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/image/favicion/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/image/favicion/favicon-16x16.png" />
-    <link rel="manifest" href="./assets/image/favicion/site.webmanifest" />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/swiper-bundle.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <div class="loader">
-      <div class="🤚">
-        <div class="👉"></div>
-        <div class="👉"></div>
-        <div class="👉"></div>
-        <div class="👉"></div>
-        <div class="🌴"></div>		
-        <div class="👍"></div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <nav class="row">
-        <input type="checkbox" class="openSidebarMenuInput" id="openSidebarMenuInput" />
-        <div class="col-12 navbar-container">
-          <img class="navbar-logo" width="60px" height="60px" src="./assets/image/Godfather.svg" alt="icon" />
-          <h1 class="navbar-logo-text">پلیر شو</h1>
-          <label for="openSidebarMenuInput" onclick="toggleMobileMenu()" class="mobile-sidebar-icon-toggle">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </label>
-
-          <label for="openSidebarMenuInput">
-            <div class="screen-darken" onclick="toggleMobileMenu()"></div>
-          </label>
-          <div class="col-7 mobile-sidebarMenu">
-            <div class="sidebarMenu-content">
-              <ul>
-                <li><a href="">صفحه اصلی</a></li>
-                <li><a href="">اصطلاحات بازی مافیا</a></li>
-                <li><a href="">انواع سناریو ها</a></li>
-                <li><a href="">آموزش بازی مافیا و مراحل آن</a></li>
-                <li><a href="">درباره ما</a></li>
-              </ul>
-              <div class="mobile-sidebarmenu-icons">
-                <a href=""> <img src="./assets/image/instagram-icon.svg" alt="" /> </a>
-                <a href=""> <img src="./assets/image/telegram-icon.svg" alt="" /> </a>
-                <a href=""> <img src="./assets/image/linkedin-icon.svg" alt="" /> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <main class="row">
-        <div class="col-11 swiper">
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <a href=""><img src="./assets/image/carousell/1.jpg" alt="" /></a>
-              <span class="home-swiper-content-text">اصطلاحات مافیا رو یاد بگیر</span>
-            </div>
-            <div class="swiper-slide">
-              <a href=""><img src="./assets/image/carousell/2.jpg" alt="" /></a>
-              <span class="home-swiper-content-text">سناریو های مافیا</span>
-            </div>
-            <div class="swiper-slide">
-              <a href=""><img src="./assets/image/carousell/3.jpeg" alt="" /></a>
-              <span class="home-swiper-content-text">بریم بازی کنیم !</span>
-            </div>
-          </div>
-          <div class="swiper-pagination swiper-pagination-horizontal"></div>
-        </div>
-
-        <div class="col-11 px-2 py-2 home-section">
-          <div class="col-12 py-5 home-section-play-game">
-            <img src="./assets/image/cinema.svg" alt="cinema" class="col-5 home-section-play-game-img" />
-            <span class="py-3 home-section-play-game-text">بریم بازی</span>
-          </div>
-
-          <hr>
-          <div class="col-12 home-section-content">
-            <div class="col-12 py-4">
-              <h3 class="col-12 py-2">سناریو بازپرس</h3>
-              <img src="./assets/image/bazporcart-senario-cover.jpg" alt="" class="col-10" />
-            </div>
-            <div class="col-12 py-4">
-              <h3 class="col-12 py-2">سناریو پدرخوانده</h3>
-              <img src="./assets/image/godfather-senario-cover.jpeg" alt="" class="col-10" />
-            </div>
-            <div class="col-12 py-4">
-              <h3 class="col-12 py-2">سناریو تکاور</h3>
-              <img src="./assets/image/takavar-senario-cover.JPG" alt="" class="col-10" />
-            </div>
-            <div class="col-12 py-4">
-              <h3 class="col-12 py-2">سناریو شب های مافیا</h3>
-              <img src="./assets/image/shab-haye-mafia-senario-cover.jpeg" alt="" class="col-10" />
-            </div>
-            <div class="col-12 py-4">
-              <h3 class="col-12 py-2">دیگر سناریو ها...</h3>
-              <img src="./assets/image/home-select-senario.jpeg" alt="" class="col-10" />
-            </div>
-          </div>
-
-          <hr />
-          <h3 class="py-4 home-section-details-title">تاریخچه بازی مافیا</h3>
-          <p class="home-section-details-text">
-            دیمیتری دیویدف از کشور روسیه خالق بازی مافیاست و اولین تاریخچه بازی گروهی مافیا به بهار سال ۱۹۸۶ میلادی برمی‌گردد. زمانی که دیویدف (Dmitry Davidoff) در دانشکده‌ی روانشناسی دانشگاه مسکو
-            برای اولین بار، این بازی گروهی جذاب را اجرا کرد. بعد از مدت زمانی کوتاه، بازی مافیا در کل دانشگاه معروف شد. این بازی به کلاس‌های درس، خوابگاه‌ها و حتی اردوهای تابستانی نیز راه یافت. این
-            ایده و بازی آنچنان محبوب شد که بلافاصله در مدارس، کافه‌ها، خانه‌ها و کم کم همه جا فراگیر شد و کل روسیه را دربرگرفت. بعد از آن نوبت کشورهای دیگر بود که میزبان اجرای چنین بازی جذابی باشند.
-          </p>
-          <img class="col-12 py-2 rounded-4 home-section-details-img" src="./assets/image/old-mafia-play.jpg" alt="" />
-        </div>
-      </main>
-      <footer class="row">
-        <div class="py-4 footer-content">
-          <span>ارتباط با ما :</span>
-          <div class="footer-icons-container">
-            <a href="">
-              <img width="40px" height="40px" src="./assets/image/instagram-icon.svg" alt="" />
-            </a>
-            <a href="">
-              <img width="40px" height="40px" src="./assets/image/telegram-icon.svg" alt="" />
-            </a>
-            <a href="">
-              <img width="40px" height="40px" src="./assets/image/linkedin-icon.svg" alt="" />
-            </a>
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
-</html>

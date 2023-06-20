@@ -1,0 +1,111 @@
+.scenarios-list {
+}
+.scenarios-list .scenarios-list-title {
+  font-family: DanaFaNum-ExtraBold;
+  color: #f66b0e;
+  user-select: none;
+}
+
+.scenarios-list ol {
+  list-style: disc;
+  color: #e9fff9;
+}
+.scenarios-list .scenarios-list-item {
+  padding: 0.5em 0;
+}
+.scenarios-list .scenarios-list-item a {
+  cursor: pointer;
+  color: #e9fff9;
+  font-size: 1.2em;
+  user-select: none;
+  opacity: 1;
+  transition: 0.4s;
+}
+.scenarios-list .scenarios-list-item a:hover {
+  text-shadow: 0 0 10px #e9fff9;
+}
+.scenarios-list .scenarios-list-item a:active {
+  opacity: 0.7;
+}
+
+.scenarios-section-content {
+  border-radius: 10px;
+}
+.scenarios-section-title {
+  font-family: DanaFaNum-ExtraBold;
+  line-height: 1.5em;
+  color: #f66b0e;
+  user-select: none;
+}
+.scenarios-details {
+  position: relative;
+  height: 10em;
+  overflow: hidden;
+  color: #e9fff9;
+}
+
+.showMoreDetails {
+  display: none;
+}
+
+.more-details{
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: #041c32;
+}
+
+.more-details-text {
+  cursor: pointer;
+  width: fit-content;
+  color: #f66b0e;
+  background-color: #041c32;
+  user-select: none;
+}
+.more-details-text:hover,
+.more-details-text:active {
+  color: #f66b0e;
+}
+
+.scenarios-details b {
+  color: #ffb200;
+}
+.scenarios-details i {
+  font-weight: bold;
+  color: #f66b0e;
+}
+
+.scenarios-section span {
+  display: block;
+}
+.scenarios-section h5 {
+  color: #ffb200;
+  display: inline-block;
+  user-select: none;
+}
+.scenarios-section p {
+  text-align: justify;
+  line-height: 2em;
+  color: #e9fff9;
+  display: inline-block;
+  user-select: none;
+}
+
+.play-scenario-btn {
+  font-family: DanaFaNum-ExtraBold;
+  border-radius: 10px;
+  font-size: 1.5em;
+  padding: 0.5em 0;
+  transition: 0.4s;
+  user-select: none;
+}
+.play-scenario-btn:hover {
+  color: #f66b0e;
+  box-shadow: 0 0 10px #f66b0e;
+}
+.play-scenario-btn:active {
+  opacity: 0.7;
+}
