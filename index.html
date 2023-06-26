@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/swiper-bundle.css" />
 
     <link rel="stylesheet" href="./css/mainStyles.css" />
+    <link rel="stylesheet" href="./css/loader.css" />
     <link rel="stylesheet" href="./css/homePage.css" />
     <link rel="stylesheet" href="./css/gameTermsPage.css" />
     <link rel="stylesheet" href="./css/gameScenariosPage.css" />
@@ -39,7 +40,7 @@
         <input type="checkbox" class="openSidebarMenuInput" id="openSidebarMenuInput" />
 
         <div class="col-12 navbar-container">
-          <img class="navbar-logo" width="60px" height="60px" src="./assets/image/Godfather.svg" alt="icon" />
+          <img class="navbar-logo" width="60px" height="60px" src="./assets/image/Main Images/Godfather.svg" alt="icon" />
           <h1 class="navbar-logo-text">پلیر شو</h1>
           <label for="openSidebarMenuInput" onclick="toggleMobileMenu()" class="mobile-sidebar-icon-toggle">
             <div class="bar1"></div>
@@ -55,40 +56,40 @@
               <ul>
                 <li>
                   <label for="openSidebarMenuInput">
-                    <span onclick="HomePage()">صفحه اصلی</span>
+                    <a class="slideBarMenuItem" onclick="HomePage()">صفحه اصلی</a>
                   </label>
                 </li>
                 <li>
                   <label for="openSidebarMenuInput">
-                    <span onclick="GameTermsPage()">اصطلاحات بازی مافیا</span>
+                    <a href="./GamePage.html" target="_self" class="slideBarMenuItem">بریم بازی</a>
                   </label>
                 </li>
                 <li>
                   <label for="openSidebarMenuInput">
-                    <span onclick="GameScenariosPage()">انواع سناریو ها</span>
+                    <a class="slideBarMenuItem" onclick="GameTermsPage()">اصطلاحات بازی مافیا</a>
                   </label>
                 </li>
                 <li>
                   <label for="openSidebarMenuInput">
-                    <span onclick="GameEducationPage()">آموزش بازی مافیا و مراحل آن</span>
+                    <a class="slideBarMenuItem" onclick="GameScenariosPage()">انواع سناریو ها</a>
                   </label>
                 </li>
                 <li>
                   <label for="openSidebarMenuInput">
-                    <span onclick="AboutUsPage()">درباره ما</span>
+                    <a class="slideBarMenuItem" onclick="GameEducationPage()">آموزش بازی مافیا و مراحل آن</a>
+                  </label>
+                </li>
+                <li>
+                  <label for="openSidebarMenuInput">
+                    <a class="slideBarMenuItem" onclick="AboutUsPage()">درباره ما</a>
                   </label>
                 </li>
               </ul>
-              <!-- <div class="mobile-sidebarmenu-icons">
-                <a href=""> <img src="./assets/image/instagram-icon.svg" alt="" /> </a>
-                <a href=""> <img src="./assets/image/telegram-icon.svg" alt="" /> </a>
-                <a href=""> <img src="./assets/image/linkedin-icon.svg" alt="" /> </a>
-              </div> -->
             </div>
           </div>
         </div>
       </nav>
-      <main class="row py-4">
+      <main class="row py-4 mb-5">
         <div class="col-11 swiper">
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -110,31 +111,41 @@
 
         <div class="col-11 px-2 py-4 home-section">
           <div class="col-12 py-2 home-section-play-game">
-            <img src="./assets/image/cinema.svg" alt="cinema" class="col-5 pt-4 home-section-play-game-img" />
-            <span class="py-3 home-section-play-game-text">بریم بازی</span>
+            <img src="./assets/image/Home Page/cinema.svg" alt="cinema" class="col-5 pt-4 home-section-play-game-img" />
+            <a href="./GamePage.html" target="_self" class="py-3 home-section-play-game-text">بریم بازی</a>
           </div>
 
           <hr />
           <div class="col-12 home-section-content">
             <div class="col-12 py-4">
-              <h3 class="col-12 py-2">سناریو بازپرس</h3>
-              <img src="./assets/image/bazporcart-senario-cover.jpg" alt="" class="col-10" />
+              <a href="#bazpors" onclick="GameScenariosPage()">
+                <h3 class="col-10 py-2">سناریو بازپرس</h3>
+                <img src="./assets/image/Home Page/bazporcart-senario-cover.jpg" alt="" class="col-10" />
+              </a>
             </div>
             <div class="col-12 py-4">
-              <h3 class="col-12 py-2">سناریو پدرخوانده</h3>
-              <img src="./assets/image/godfather-senario-cover.jpeg" alt="" class="col-10" />
+              <a href="#godfather" onclick="GameScenariosPage()">
+                <h3 class="col-10 py-2">سناریو پدرخوانده</h3>
+                <img src="./assets/image/Home Page/godfather-senario-cover.jpeg" alt="" class="col-10" />
+              </a>
             </div>
             <div class="col-12 py-4">
-              <h3 class="col-12 py-2">سناریو تکاور</h3>
-              <img src="./assets/image/takavar-senario-cover.JPG" alt="" class="col-10" />
+              <a href="#shab-haye-mafia" onclick="GameScenariosPage()">
+                <h3 class="col-10 py-2">سناریو شب های مافیا</h3>
+                <img src="./assets/image/Home Page/shab-haye-mafia-senario-cover.jpeg" alt="" class="col-10" />
+              </a>
             </div>
             <div class="col-12 py-4">
-              <h3 class="col-12 py-2">سناریو شب های مافیا</h3>
-              <img src="./assets/image/shab-haye-mafia-senario-cover.jpeg" alt="" class="col-10" />
+              <a href="#takavar" onclick="GameScenariosPage()">
+                <h3 class="col-10 py-2">سناریو تکاور</h3>
+                <img src="./assets/image/Home Page/takavar-senario-cover.JPG" alt="" class="col-10" />
+              </a>
             </div>
             <div class="col-12 py-4">
-              <h3 class="col-12 py-2">دیگر سناریو ها...</h3>
-              <img src="./assets/image/home-select-senario.jpeg" alt="" class="col-10" />
+              <a onclick="GameScenariosPage()">
+                <h3 class="col-10 py-2">دیگر سناریو ها...</h3>
+                <img src="./assets/image/Home Page/others-scenario-cover.jpeg" alt="" class="col-10" />
+              </a>
             </div>
           </div>
 
@@ -145,14 +156,11 @@
             برای اولین بار، این بازی گروهی جذاب را اجرا کرد. بعد از مدت زمانی کوتاه، بازی مافیا در کل دانشگاه معروف شد. این بازی به کلاس‌های درس، خوابگاه‌ها و حتی اردوهای تابستانی نیز راه یافت. این
             ایده و بازی آنچنان محبوب شد که بلافاصله در مدارس، کافه‌ها، خانه‌ها و کم کم همه جا فراگیر شد و کل روسیه را دربرگرفت. بعد از آن نوبت کشورهای دیگر بود که میزبان اجرای چنین بازی جذابی باشند.
           </p>
-          <img class="col-12 my-5 rounded-5 home-section-details-img" src="./assets/image/old-mafia-play.jpg" alt="" />
+          <img class="col-12 my-5 rounded-5 home-section-details-img" src="./assets/image/Home Page/old-mafia-play.jpg" alt="" />
         </div>
         <div class="col-11 px-2 py-4 gameTerms-section">
-          <h1 class="py-5 text-center game-terms-advanced-titles">اصطلاحات مافیا</h1>
-
-          <img src="./assets/image/mafia-couple-mask-white.svg" alt="" class="col-12 py-2" />
-
-          <p class="py-4 game-terms-Introduction">
+          <h1 class="py-2 text-center game-terms-advanced-titles">اصطلاحات مافیا</h1>
+          <p class="py-2 game-terms-Introduction">
             اگر برای اولین بار بازی مافیا رو تجربه کرده باشید، بازیکن‌ها یکسری اصطلاحات و کلمات خاصی میگن که مختص بازی مافیا هست. طبیعتا اگر معنی این کلمات رو ندونید نمیتونید به درستی بازی کنید. در
             این صفحه اصطلاحات بازی مافیا که رایج هستند رو توضیح دادیم!
           </p>
@@ -324,7 +332,7 @@
 
           <h2 class="py-5 game-terms-advanced-titles">اصطلاحات بازی مافیا: پیشرفته</h2>
 
-          <img src="./assets/image/mafia-couple-mask-black.svg" alt="" class="col-12 py-2" />
+          <img src="./assets/image/Game Terms Page/mafia-couple-mask-black.svg" alt="" class="col-12 my-2" />
 
           <hr />
           <div class="py-4">
@@ -432,8 +440,9 @@
               صحبت تموم بشه، هر نفر باید شهروند خودش رو مشخصه کنه و در صورتی که شهروندها به درستی به هم دست بدن، شهروند برنده بازی میشه، در غیر این صورت مافیا برنده خواهد شد.
             </p>
           </div>
+          <img src="./assets/image/Game Terms Page/mafia-couple-mask-white.svg" alt="" class="col-12 my-2" />
         </div>
-        <div class="col-11 px-2 py-2 gameScenarios-section">
+        <div class="col-11 px-2 py-4 gameScenarios-section">
           <div class="py-4 scenarios-list">
             <h1 class="py-3 m-0 scenarios-list-title">فهرست سناریو ها</h1>
             <ol class="p-0 pe-3">
@@ -481,6 +490,33 @@
               <span class="authorized-persons">
                 <h5>نفرات مجاز:</h5>
                 <p>۹، ۱۰، ۱۲ و ۱۳ نفر</p>
+              </span>
+              <span class="py-3 last-move-cards">
+                <h3>کارت های حرکت اخر</h3>
+
+                <h5>مسیر سبز</h5>
+                <p>بازیکن در حال ترک بازی با داشتن این کارت می‌تواند یک بازیکن را در مسیر سبز آن روز قرار دهد که تحت هر اتهامی در رای‌گیری قرار نگیرد.</p>
+
+                <h5>فرش قرمز</h5>
+                <p>بازیکن در حال ترک بازی با داشتن این کارت بازیکنی را متهم می‌کند و فرش قرمزی برای قرار گرفتن در رای‌گیری پایان آن روز، برایش پهن می‌کند تا در هر شرایطی به دفاعیه وارد شود.</p>
+
+                <h5>ذهن زیبا</h5>
+                <p>
+                  در بازی شب های مافیا، بازیکن در حال ترک با داشتن این کارت باید از ذهن خود استفاده نماید، یک نقش از نقش‌هایی که در روند بازی اعلام نشده یا مستقیم نمی‌داند را برمبنای حدس برملا و پس از
+                  تایید صحت این افشاگری توسط گرداننده می‌تواند به بازی برگردد.
+                </p>
+
+                <h5>بی خوابی</h5>
+                <p>بدون اینکه اتفاقی بیوفته، مستقیم به روز بعد می‌رویم. احتمالا بازیکنان خسته و خواب آلود به متهم کردن یا حمایت از یکدیگر خواهند پرداخت.</p>
+
+                <h5>سرگیجه</h5>
+                <p>کارت سرگیجه به بازیکنی که داده شود، فرد مورد نظر به مدت یک روز و یک شب دچار سرگیجه می‌شود. هیچ اقدام و عمل او موثر واقع نمی‌شود، شلیک او به هدف نمی‌خورد و رای او حساب نمی‌شود.</p>
+
+                <h5>شلیک نهایی</h5>
+                <p>
+                  بازیکن در حال ترک بازی با داشتن این کارت به بازداشتی موقت می‌رود و بعد از رای‌گیری دور دوم برخواهد گشت و به جای مافیا شلیک شب را به انتخاب خودش انجام خواهد داد. بازیکن بعد از شلیک
+                  نهایی کاملا از بازی خارج می‌شود.
+                </p>
               </span>
               <button class="col-12 my-4 play-scenario-btn">این سناریو رو بازی کن!</button>
             </div>
@@ -538,7 +574,8 @@
                 <h5>نفرات مجاز:</h5>
                 <p>۱۱ نفر</p>
               </span>
-              <span class="last-move-cards">
+              <span class="py-3 last-move-cards">
+                <h3>کارت های حرکت اخر</h3>
                 <h5>سکوت بره ها :</h5>
                 <p>
                   بازیکن اخراجی با نشان کردن دو نفر٬ آنان را بمدت یک روز سایلنت کرده و افرادی که نشان شده باشند٬ فردا حتی در دفاع امکان صحبت کردن ندارند. اگر تعداد بازیکنان به نصف رسید٬ در سکوت بره ها
@@ -1358,29 +1395,150 @@
             </div>
           </div>
         </div>
-        <div class="col-11 px-2 py-2 gameEducation-section"></div>
-        <div class="col-11 px-2 py-2 aboutUs-section"></div>
-      </main>
-      <!-- <footer class="row">
-        <div class="footer-content">
-          <span>ارتباط با ما :</span>
-          <div class="footer-icons-container">
-            <a href="">
-              <img width="40px" height="40px" src="./assets/image/instagram-icon.svg" alt="" />
-            </a>
-            <a href="">
-              <img width="40px" height="40px" src="./assets/image/telegram-icon.svg" alt="" />
-            </a>
-            <a href="">
-              <img width="40px" height="40px" src="./assets/image/linkedin-icon.svg" alt="" />
-            </a>
+        <div class="col-11 px-2 py-4 gameEducation-section">
+          <div class="pt-4 pb-5 learning-container">
+            <h3 class="py-3 learning-title">آموزش بازی مافیا: قواعد اولیه</h3>
+            <p class="learning-text">
+              بازی مافیا از دو تیم شهروند و مافیا تشکیل شده است. اصطلاحا به تیم مافیا اقلیت آگاه و به تیم شهروند اکثریت آگاه گفته میشه، دلیلش هم این هست که اعضای تیم مافیا با همدیگه در حین بازی آشنا
+              میشن و همدیگه رو میشناسن (آگاه) و شهروندها در طول بازی باید سعی کنند که همدیگه رو پیدا کنند (ناآگاه). بازی مافیا معروف‌ترین بازی نقش مخفی هست. بازی نقش مخفی به بازی‌هایی گفته میشه که هر
+              کسی یک نقش مخفی داره که کسی نباید نقش بقیه بازیکن‌ها رو متوجه بشه. در طول بازی به روش‌های مختلف، بازیکن‌ها ممکن هست از بازی خارج بشن. هدف مافیاها بیرون کردن شهروندها هست و هدف شهروندها،
+              پیدا کردن و بیرون کردن مافیاها هست. بازی از دو فاز روز و شب تشکیل شده، در فاز روز، افراد با هم صحبت میکنن و سعی میکنن که اطلاعاتشون رو با همدیگه به اشتراک بذارن و در فاز شب، اگر بازیکنی
+              قابلیتی داشته باشه باید از قابلیتش استفاده کنه.
+            </p>
+
+            <h3 class="py-3 learning-title">تقسیم نقش</h3>
+            <p class="learning-text">
+              اگر میخواید توی جمع خونوادگی یا دوستانه خودتون مافیا بازی کنید، اولین قدم اینه که به هر کسی یک نقشی بدید. قبل از نقش دادن هم باید تعداد نفرات رو بشمرید و بر اساس نفرات، یک سناریو رو
+              انتخاب کنید (توی این پست در مورد سناریوها و توی این پست در مورد نقش‌ها توضیح دادیم). بعد از انتخاب سناریو و مشخص کردن نقش‌ها، نقش‌ها رو بین افراد تقسیم کنید. هیچ کسی نباید اجازه بده بقیه
+              نقشش رو متوجه بشن.
+            </p>
+            <h3 class="py-3 learning-title">صحبت معارفه</h3>
+            <p class="learning-text">
+              همونطور که گفتیم بازی از فاز روز و شب تشکیل شده. اولین مرحله در آموزش بازی مافیا، فاز روز هست که به اسم روز معارفه شناخته میشه. به طور کلی در طول روز افراد به نوبت صحبت میکنن و هر کس
+              مجاز هست توی نوبت خودش صحبت کنه. مرسوم هست که توی روز معارفه، هر کسی خودش رو معرفی میکنه و حالا اگر خواست میتونه احوال‌پرسی هم بکنه. بعد از معرفی و صحبت‌های اولیه میتونید موارد زیر رو
+              بگید:
+              <br /><br />
+              ● به نظر شما چه کسانی مافیا هستن؟
+              <br />
+              ● حرف چه کسی مشکوک بود؟
+              <br />
+              ● با حرف چه کسی موافق هستی؟
+              <br />
+              ● از بقیه چه حسی میگیری؟
+
+              <br /><br />
+              اگر هم نظری نداشتی میتونی بگی نظری ندارم، حتما نباید نظر بدی.
+              <br /><br />
+              <b>
+                سلام؛ دانیال هستم، خیلی خوشحالم که دور هم داریم بازی میکنیم.
+                <br />
+                به نظرم حرف شماره یک مشکوک بود، دلیلی نداشت به ۵ نفر تارگت بزنه. از نظر من شماره ۳ شهروند هست، ذهنش به ذهن من نزدیک بود. تارگت رندوم هم میزنم به شماره ۸ و ۱۰. بچرخه امیدوارم بازی خوبی
+                باشه.
+              </b>
+            </p>
+
+            <h3 class="py-3 learning-title">شب معارفه</h3>
+            <p class="learning-text">
+              وقتی که فاز شب شروع میشه، گرداننده بازی اعلام میکنه که همه افراد بخوابند (منظور از خوابیدن در بازی مافیا این هست که هر کسی چشمش رو ببنده). سپس به نوبت نقش‌هایی که باید بیدار بشن رو بیدار
+              میکنه. اول همه اعضای تیم مافیا رو بیدار میکنه تا با همدیگه آشنا بشن و اگر گرداننده بازی اجازه سوییچ داد، میتونن سوییچ انجام بدن (توی این پست در مورد سوییچ توضیح دادیم). بعد از اینکه تیم
+              مافیا مشورت کرد، همه اعضای تیم مافیا میخوابن و بقیه نقش‌ها رو بیدار میکنه تا باهاشون آشنا بشه (شب معارفه هیچ نقشی از قابلیتش استفاده نمیکنه).
+            </p>
+
+            <h3 class="py-3 learning-title">روز اول</h3>
+            <p class="learning-text">
+              بعد شب معارفه، نوبت به روز اول میرسه. گاد اعلام میکنه که روز میشه و همه بازیکن‌ها چشم‌هاشون رو باز میکنن.مثل روز معارفه، افراد به نوبت باید صحبت کنند. از روز اول به بعد بازیکن‌ها میتونن
+              چالش بگیرند. بعد از اینکه همه بازیکن‌ها صحبت کردن، نوبت به رای‌گیری میرسه. به ترتیب برای هر شخص رای‌گیری میشه و بر اساس تعداد حد نصاب، مشخص میشه که چه کسانی باید از خودشون دفاع کنند. بعد
+              از اینکه بازیکن‌ها دفاع کردن، برای اون بازیکن‌ها دوباره رای‌گیری انجام میشه (رای‌گیری دوم یا رای خروج) و اگر بازیکنی حد نصاب آرا رو آورد، از بازی خارج میشه و باید وصیت کنه.
+            </p>
+
+            <h3 class="py-3 learning-title">شب اول</h3>
+            <p class="learning-text">
+              بعد از به پایان رسیدن روز اول، شب اول شروع میشه. از شب اول به بعد، هر شب مافیا یک نفر رو برای شات شب انتخاب میکنه. بعد از اینکه تیم مافیا بیدار شد و با مشورت همدیگه شات رو انتخاب کردن،
+              همه اعضای تیم مافیا میخوابن و بقیه نقش‌ها به نوبت بیدار میشن. بعد از اینکه شب اول تموم شد، روز بعد شروع میشه و به همین ترتیب همه کارها تکرار میشن.
+              <br /><br />
+              توجه: توی بعضی از سناریوها روز معارفه وجود نداره و از شب معارفه بازی شروع میشه. بنابراین در ابتدای بازی همه میخوابن و اعضای تیم مافیا به همدیگه معرفی میشن. بعد از اینکه روز شد، افراد
+              چشم‌هاشون رو باز میکنن و روز اول شروع میشه. بقیه اتفاقات مثل توضیحاتی که دادیم هست.
+            </p>
+
+            <h3 class="py-3 learning-title">شرط برد</h3>
+            <p class="learning-text">
+              بازی تا کی ادامه داره؟ چه زمانی و کدوم تیم برنده بازی میشه؟ از کجا بفهمیم کی برده؟ شرط برد به معنی این هست که چه شرایطی باید اتفاق بیوفته تا بازی تموم بشه و یکی از تیم‌ها برنده بازی بشه.
+              شرط برد تیم مافیا و شهروند به صورت زیر هست:
+              <br /><br />
+              ● <b>تیم مافیا:</b> زمانی برنده میشه که تعداد شهروندها کمتر یا مساوی تعداد مافیاها باشه
+              <br />
+              ● <b>تیم شهروند:</b> زمانی برنده میشه که همه اعضای تیم مافیا از بازی خارج بشن.
+              <br />
+            </p>
+
+            <h3 class="py-3 learning-title">نکاتی که به دردمون میخوره هول نشیم</h3>
+            <p class="learning-text">
+              قطعا صحبت کردن در مقابل یکسری از آدم‌ها کار راحتی نیست و ممکن هست برای بار اول استرس داشته باشیم. سعی کنیم که هول نشیم و ریلکس صحبت کنیم. اما اگر هم استرس گرفتیم، اتفاق طبیعی‌ای هست و
+              اکثر آدم‌ها برای بار اول این اتفاق براشون میوفته.
+            </p>
+
+            <h3 class="py-3 learning-title">موقع صحبت بایستید</h3>
+            <p class="learning-text">
+              اولین نکته در آموزش بازی مافیا این هست که سعی کنید موقع صحبت بایستید تا همه بتونن شما رو ببینن و صداتون رو بهتر بشنون. با صدای رسا و محکم صحبت‌هاتون رو انجام بدید.
+            </p>
+
+            <h3 class="py-3 learning-title">ساکت نباشیم</h3>
+            <p class="learning-text">
+              اما اینکه استرس داشته باشیم نباید باعث بشه که هیچ صحبتی نکنیم. بازی مافیا کاملا صحبت محور هست و سعی کنیم صحبت کنیم. کسی از شما برای بازی اول انتظار نداره که کلی صحبت کنید، در حد همین که
+              نوبت خودتون صحبت کنید کافی هست.
+            </p>
+
+            <h3 class="py-3 learning-title">خوب گوش بدیم</h3>
+            <p class="learning-text">
+              برای اینکه بتونیم صحبت کنیم، قبلش باید حرف‌های بقیه رو خوب گوش بدیم و به یادمون بسپریم. بنابراین با تمرکز به حرف‌های بقیه گوش کنید و اگر هم فکر میکنید یادتون میره میتونید توی نوت گوشی
+              یادداشت‌برداری کنید.
+            </p>
+
+            <h3 class="py-3 learning-title">الکی رای ندیم</h3>
+            <p class="learning-text">
+              هر رای اشتباه شما باعث میشه که روند بازی عوض بشه، بنابراین پیشنهاد میکنیم که اوایل بازی که خیلی حرفه‌ای نیستید کمتر رای بدید تا احتمال اینکه رای اشتباهی بدید، کمتر بشه.
+            </p>
+
+            <h3 class="py-3 learning-title">کم تارگت بزن</h3>
+            <p class="learning-text">
+              تو بازی اول قرار نیست که شما همه مافیاها رو پیدا کنید. بنابراین بهتر هست به جای اینکه ذهنتون رو درگیر چند نفر کنید، روی یک یا دو نفر تمرکز کنید. البته تک تارگتی بودن از ویژگی‌های مافیاها
+              هست اما به عنوان یک فردی که تازه شروع به بازی کرده، کسی از شما انتظار یک چین (Chain) مافیایی ندارد. بنابراین با انتخاب تارگت‌های کم سعی کن تمرکزت رو بالا ببری.
+            </p>
           </div>
         </div>
-      </footer> -->
+        <div class="col-11 px-2 py-4 aboutUs-section">
+          <div class="mt-4 mb-5">
+            <h1 class="py-3 about-me-title">درباره من :</h1>
+            <p class="py-2 about-me-text">
+              سلام من دانیالم توسعه دهنده فرانت اند .
+              <br /><br />
+              این وب سایت یکی از نمونه کار هامه اگر دوست داشتید میتونید توی گیت هاب نمونه کار های دیگم رو ببینی .
+              <br /><br />
+              امیدوارم از این وب سایت خوشت اومده باشه و بازی های پر هیجانی با این وب سایت کرده باشی .
+              <br /><br />
+              اگر نظر یا پیشنهادی در مورد نمونه کارهام داشتی میتونی از این راه ها باهام ارتباط داشته باشی .
+            </p>
+            <div class="row my-social-media">
+              <span class="col">
+                <img width="45px" height="45px" src="./assets/image/About Page/instagram-icon.svg" alt="instagram icon" />
+              </span>
+              <span class="col">
+                <img width="45px" height="45px" src="./assets/image/About Page/telegram-icon.svg" alt="telegram icon" />
+              </span>
+              <span class="col">
+                <img width="45px" height="45px" src="./assets/image/About Page/linkedin-icon.svg" alt="linkedin icon" />
+              </span>
+              <span class="col">
+                <img width="45px" height="45px" src="./assets/image/About Page/github-icon.svg" alt="github icon" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/swiperLibrary.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

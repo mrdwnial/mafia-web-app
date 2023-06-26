@@ -1,0 +1,125 @@
+.game-page-titles {
+  font-family: DanaFaNum-ExtraBold;
+  text-align: center;
+  color: #f66b0e;
+}
+
+main ol {
+  list-style: disc;
+  color: #e9fff9;
+}
+
+main ol .scenario-name {
+  padding: 0.5em 0;
+}
+main ol .scenario-name span {
+  cursor: pointer;
+  color: #e9fff9;
+  font-size: 1.2em;
+  user-select: none;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+main ol .scenario-name span:hover {
+  text-shadow: 0 0 10px #e9fff9;
+}
+main ol .scenario-name span:active {
+  opacity: 0.7;
+}
+
+main .players-list-section {
+}
+
+main .players-list-section .add-player-name-container {
+  position: relative;
+}
+
+main .players-list-section .add-player-name-container input {
+  padding: 1em;
+  font-weight: 700;
+  border-radius: 20px;
+  color: #041c32;
+  background-color: #e9fff9;
+  transition: 0.4s;
+}
+main .players-list-section .add-player-name-container input:focus {
+  box-shadow: inset 0 0 5px #041c32;
+}
+
+main .players-list-section .add-player-name-container button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1rem;
+  color: #e9fff9;
+  background-color: #041c32;
+  transition: 0.2s;
+}
+main .players-list-section .add-player-name-container button:active {
+  opacity: 0.7;
+}
+
+main .players-list-section .play-role-with-number-title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #eeb902;
+}
+
+main .players-list-section .add-player-number-container span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .players-list-section .add-player-number-container span input {
+  padding: 0.5em;
+  margin: 0 0.5em;
+  font-weight: 700;
+  border-radius: 20px;
+  color: #041c32;
+  background-color: #e9fff9;
+  text-align: center;
+  transition: 0.4s;
+}
+main .players-list-section .add-player-number-container span input:focus {
+  box-shadow: inset 0 0 5px #041c32;
+}
+
+main .players-list-section .add-player-number-container span label {
+  text-align: center;
+  font-size: 1rem;
+  color: #e9fff9;
+}
+
+
+main .players-list-section .players-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 5px dotted #f66b0e;
+  border-radius: 20px;
+}
+main .players-list-section .players-list .players-list-item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eeb902;
+  border-radius: inherit;
+}
+main .players-list-section .players-list .players-list-item img{
+  cursor: pointer;
+}
+main .players-list-section .players-list .players-list-item .players-list-item-text{
+  margin: 0 !important;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #041c32;
+}

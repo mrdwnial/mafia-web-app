@@ -1,0 +1,17 @@
+.learning-title {
+  text-align: center;
+  font-family: DanaFaNum-ExtraBold;
+  color: #f66b0e;
+  user-select: none;
+}
+.learning-text {
+  text-align: justify;
+  line-height: 2em;
+  font-size: 1.1em;
+  color: #e9fff9;
+  display: inline-block;
+  user-select: none;
+}
+.learning-text b{
+  color: #ffb200;
+}

@@ -1,0 +1,26 @@
+.about-me-title {
+  font-family: DanaFaNum-ExtraBold;
+  color: #f66b0e;
+  user-select: none;
+}
+.about-me-text {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.7em;
+  color: #e9fff9;
+}
+
+.my-social-media span {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-social-media span img {
+  border-radius: 50%;
+  transition: .3s;
+}
+.my-social-media span img:hover {
+  box-shadow: 0 0 20px #f66b0e, inset 0 0 30px 10px #f66b0e;
+  transform: scale(1.2);
+}

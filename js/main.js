@@ -8,7 +8,7 @@ const AboutUsSection = $.querySelector(".aboutUs-section");
 
 // loader
 const loaderContainer = $.querySelector(".loader");
-loaderContainer.classList.remove("d-none");
+// loaderContainer.classList.remove("d-none");
 
 function loaderHandler() {
   loaderContainer.classList.remove("d-none");
@@ -21,11 +21,14 @@ function loaderHandler() {
   }, 1000);
 }
 
+
+
 // mobile sidebar disable scroll function
 function toggleMobileMenu() {
   $.body.classList.toggle("disable-scroll");
 }
 
+// local storage section for last page opened
 let getLastPageName = localStorage.getItem("lastPage");
 if (!getLastPageName) {
   localStorage.setItem("lastPage", "HomePage");
@@ -46,6 +49,8 @@ function initialChangingPage(pageName) {
   loaderHandler();
   CloseAllPages();
 }
+
+// pages functions
 
 function HomePage() {
   initialChangingPage("HomePage");
@@ -72,6 +77,7 @@ function AboutUsPage() {
   AboutUsSection.classList.remove("d-none");
 }
 
+// close all pages function
 function CloseAllPages() {
   $.body.classList.remove("disable-scroll");
   $.body.scrollTo(0, 0);
@@ -82,6 +88,8 @@ function CloseAllPages() {
   AboutUsSection.classList.add("d-none");
 }
 
+
+// show and hide more details text section
 let moreScenariosDetailText = $.querySelectorAll(".more-details-text");
 
 moreScenariosDetailText.forEach(function (moreText) {
@@ -105,30 +113,4 @@ moreScenariosDetailText.forEach(function (moreText) {
       textElement.removeAttribute("target");
     }
   });
-});
-
-// swipe library code
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: true,
-
-  pagination: {
-    el: ".swiper-pagination",
-    type: "bullets",
-  },
-
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      translate: [0, 0, -400],
-    },
-    next: {
-      translate: ["100%", 0, 0],
-    },
-  },
 });

@@ -1,5 +1,3 @@
-.scenarios-list {
-}
 .scenarios-list .scenarios-list-title {
   font-family: DanaFaNum-ExtraBold;
   color: #f66b0e;
@@ -81,6 +79,7 @@
 .scenarios-section span {
   display: block;
 }
+
 .scenarios-section h5 {
   color: #ffb200;
   display: inline-block;
@@ -93,7 +92,10 @@
   display: inline-block;
   user-select: none;
 }
-
+.last-move-cards h3{
+  font-family: DanaFaNum-ExtraBold;
+  color: #f66b0e;
+}
 .play-scenario-btn {
   font-family: DanaFaNum-ExtraBold;
   border-radius: 10px;

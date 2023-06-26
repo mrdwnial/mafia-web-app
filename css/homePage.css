@@ -5,10 +5,6 @@
   align-items: center;
   flex-direction: column;
 }
-.home-section-play-game .home-section-play-game-img {
-  border-radius: 50%;
-  cursor: pointer;
-}
 
 .home-section-play-game .home-section-play-game-text {
   cursor: pointer;
@@ -18,21 +14,28 @@
   transition: 0.4s;
   user-select: none;
 }
-.home-section-play-game .home-section-play-game-img:active,
+
+.home-section-play-game .home-section-play-game-text:hover {
+  text-shadow: 0 0 20px #f66b0e;
+}
 .home-section-play-game .home-section-play-game-text:active {
   transition: 0.1s;
   opacity: 0.7;
 }
-.home-section-play-game .home-section-play-game-text:hover {
-  text-shadow: 0 0 20px #f66b0e;
-}
-
 
 .home-section .home-section-content div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.home-section .home-section-content div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  width: fit-content;
+  height: fit-content;
 }
 .home-section .home-section-content div img {
   cursor: pointer;
@@ -69,7 +72,6 @@
   opacity: 0.7;
 }
 
-
 .home-section .home-section-details-title {
   user-select: none;
   text-align: right;
@@ -81,6 +83,4 @@
   line-height: 2em;
   text-align: justify;
   color: #e9fff9;
-}
-.home-section-details-img{
 }
