@@ -21,8 +21,6 @@ function loaderHandler() {
   }, 1000);
 }
 
-
-
 // mobile sidebar disable scroll function
 function toggleMobileMenu() {
   $.body.classList.toggle("disable-scroll");
@@ -62,9 +60,18 @@ function GameTermsPage() {
   GameTermsSection.classList.remove("d-none");
 }
 
-function GameScenariosPage() {
-  initialChangingPage("GameScenariosPage");
-  GameScenariosSection.classList.remove("d-none");
+function GameScenariosPage(scenarioName,isNavigateInPage) {
+  // If you want to move, use this page => isNavigateInPage = true
+  if(!isNavigateInPage){
+    initialChangingPage("GameScenariosPage");
+    GameScenariosSection.classList.remove("d-none");
+    if (scenarioName) {
+      window.location.hash = "#" + scenarioName;
+      document.getElementById(scenarioName).scrollIntoView({ behavior: "smooth" });
+    }
+  } else {
+    document.getElementById(scenarioName).scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 function GameEducationPage() {
@@ -88,7 +95,6 @@ function CloseAllPages() {
   AboutUsSection.classList.add("d-none");
 }
 
-
 // show and hide more details text section
 let moreScenariosDetailText = $.querySelectorAll(".more-details-text");
 
@@ -104,13 +110,10 @@ moreScenariosDetailText.forEach(function (moreText) {
     if (!isShowDetails) {
       scenarioDetailElement.style.height = "10em";
       textElement.innerHTML = "توضیحات بیشتر...";
-      textElement.setAttribute("href", `#${thisScenarioId}`);
-      textElement.setAttribute("target", "_self");
+      document.getElementById(thisScenarioId).scrollIntoView({ behavior: "smooth" });
     } else {
       scenarioDetailElement.style.height = "auto";
       textElement.innerHTML = "توضیحات کمتر...";
-      textElement.removeAttribute("href");
-      textElement.removeAttribute("target");
     }
   });
 });

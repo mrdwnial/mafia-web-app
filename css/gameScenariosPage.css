@@ -11,7 +11,7 @@
 .scenarios-list .scenarios-list-item {
   padding: 0.5em 0;
 }
-.scenarios-list .scenarios-list-item a {
+.scenarios-list .scenarios-list-item span {
   cursor: pointer;
   color: #e9fff9;
   font-size: 1.2em;
@@ -19,10 +19,10 @@
   opacity: 1;
   transition: 0.4s;
 }
-.scenarios-list .scenarios-list-item a:hover {
+.scenarios-list .scenarios-list-item span:hover {
   text-shadow: 0 0 10px #e9fff9;
 }
-.scenarios-list .scenarios-list-item a:active {
+.scenarios-list .scenarios-list-item span:active {
   opacity: 0.7;
 }
 

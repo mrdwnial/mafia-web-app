@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     <title>پلیر شو</title>
 
@@ -80,7 +81,7 @@
       </nav>
 
       <main class="row py-4 mb-5">
-        <div class="col-12 mb-5 players-list-section">
+        <div class="col-12 d-none mb-5 players-list-section">
           <h1 class="col-12 py-3 game-page-titles">لیست بازیکنان</h1>
 
           <div class="col-12 py-3 add-player-name-container">
@@ -98,15 +99,17 @@
           <div class="col-12 py-4 text-center players-list">
             <div class="col-10 p-2 my-1 players-list-item">
               <p class="col-10 players-list-item-text">دانیال</p>
-              <img onclick="removePlayerFromList()" src="./assets/image/Game Page/red-remove-square.svg" class="col-2" alt="red-remove-square">
+              <img onclick="removePlayerFromList()" src="./assets/image/Game Page/red-remove-square.svg" class="col-2" alt="red-remove-square" />
             </div>
           </div>
+
+          <button type="submit" class="col-5 my-4 start-game-btn">شروع</button>
         </div>
 
-        <div class="col-12 d-none select-scenario-section">
+        <div class="col-12 d-none mb-5 select-scenario-section">
           <h1 class="col-12 py-3 game-page-titles">انتخاب سناریو</h1>
           <div class="col-11 scenarios-list-container">
-            <ol class="p-0 pe-3">
+            <ul class="p-0">
               <li class="scenario-name"><span onclick="shabHayeMafia()"> سناریو شب های مافیا </span></li>
               <li class="scenario-name"><span onclick="godfather()"> سناریو پدرخوانده </span></li>
               <li class="scenario-name"><span onclick="bazpors()"> سناریو بازپرس </span></li>
@@ -125,10 +128,45 @@
               <li class="scenario-name"><span onclick="godFatherShow()"> سناریو گادفادرشو </span></li>
               <li class="scenario-name"><span onclick="hillerKiller()"> سناریو هیلر کیلر </span></li>
               <li class="scenario-name"><span onclick="khaen()"> سناریو شهروند خائن </span></li>
-            </ol>
+            </ul>
           </div>
 
-          <img src="./assets/image/Game Page/black-mask.jpeg" alt="black mask" class="col-10 my-4 p-0 rounded-5 game-page-title-img" />
+          <img src="./assets/image/Game Page/black-mask.jpeg" alt="black mask" class="col-10 my-4 p-0 rounded-5 select-scenario-img" />
+        </div>
+
+        <div class="col-12 mb-5 play-role-container">
+          <h1 class="col-12 py-3 game-page-titles">نقش خود را ببینید</h1>
+          <div class="row gy-3 mx-1 show-player-role-container">
+            <div class="col-4 p-1 show-player-role-item">
+              <span class="col-12 p-3">1</span>
+            </div>
+            <div class="col-4 p-1 show-player-role-item">
+              <span class="col-12 p-3">2</span>
+            </div>
+            <div class="col-4 p-1 show-player-role-item">
+              <span class="col-12 p-3">3</span>
+            </div>
+            <div class="col-4 p-1 show-player-role-item">
+              <span class="col-12 p-3">4</span>
+            </div>
+            <div class="col-4 p-1 show-player-role-item">
+              <span class="col-12 p-3">5</span>
+            </div>
+            <div class="col-4 p-1 show-player-role-item">
+              <span class="col-12 p-3">6</span>
+            </div>
+            <div class="col-4 p-1 show-player-role-item">
+              <span class="col-12 p-3">7</span>
+            </div>
+          </div>
+          <div class="d-none show-play-role-card-container">
+            <span class="show-play-role-card">
+              <h5 class="player-role-side">ساید <span>مافیا</span></h5>
+              <h1 class="py-3 player-role-card-title">گادفادر</h1>
+              <p class="px-2 player-role-card-details">درحقیقت همان رئیس مافیاست. در سبک‌های مختلف مافیا، رئیس مافیا یا دن یا گادفادر به عنوان یک مافیا حضور دارد و نقش رهبری و هدایت تیم مافیا را به عهده می‌گیرد. کشته ی هر شب مافیا، که با شور و مشورت مافیاها با هم انتخاب می‌شود، توسط رئیس مافیا به گرداننده اعلام نهایی می‌گردد. جواب استعلام پدرخوانده برای کارآگاه همیشه شهروند است و تعیین شلیک شب از طرف گروه مافیا به عهده اوست.</p>
+              <img onclick="removePlayerFromList()" src="./assets/image/Game Page/red-remove-square.svg" class="close-player-role-card" alt="red-remove-square" />
+            </span>
+          </div>
         </div>
       </main>
     </div>

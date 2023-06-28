@@ -79,6 +79,7 @@ body {
   font-weight: 500, 700, 800;
   scroll-behavior: smooth;
   direction: rtl;
+  /* -webkit-overflow-scrolling: touch; */
 }
 
 .disable-scroll {

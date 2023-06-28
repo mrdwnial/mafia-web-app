@@ -112,46 +112,40 @@
         <div class="col-11 px-2 py-4 home-section">
           <div class="col-12 py-2 home-section-play-game">
             <img src="./assets/image/Home Page/cinema.svg" alt="cinema" class="col-5 pt-4 home-section-play-game-img" />
-            <a href="./GamePage.html" target="_self" class="py-3 home-section-play-game-text">بریم بازی</a>
+            <a href="./GamePage.html" target="_self" class="py-3 home-section-play-game-text">بریم بازی کنیم</a>
           </div>
 
           <hr />
           <div class="col-12 home-section-content">
-            <div class="col-12 py-4">
-              <a href="#bazpors" onclick="GameScenariosPage()">
-                <h3 class="col-10 py-2">سناریو بازپرس</h3>
-                <img src="./assets/image/Home Page/bazporcart-senario-cover.jpg" alt="" class="col-10" />
-              </a>
+            <div class="col-12 py-4" onclick="GameScenariosPage('bazpors')">
+              <h3 class="col-10 py-2">سناریو بازپرس</h3>
+              <img src="./assets/image/Home Page/bazporcart-senario-cover.jpg" alt="" class="col-10" />
             </div>
-            <div class="col-12 py-4">
-              <a href="#godfather" onclick="GameScenariosPage()">
-                <h3 class="col-10 py-2">سناریو پدرخوانده</h3>
-                <img src="./assets/image/Home Page/godfather-senario-cover.jpeg" alt="" class="col-10" />
-              </a>
+
+            <div class="col-12 py-4" onclick="GameScenariosPage('godfather')">
+              <h3 class="col-10 py-2">سناریو پدرخوانده</h3>
+              <img src="./assets/image/Home Page/godfather-senario-cover.jpeg" alt="" class="col-10" />
             </div>
-            <div class="col-12 py-4">
-              <a href="#shab-haye-mafia" onclick="GameScenariosPage()">
-                <h3 class="col-10 py-2">سناریو شب های مافیا</h3>
-                <img src="./assets/image/Home Page/shab-haye-mafia-senario-cover.jpeg" alt="" class="col-10" />
-              </a>
+
+            <div class="col-12 py-4" onclick="GameScenariosPage('shab-haye-mafia')">
+              <h3 class="col-10 py-2">سناریو شب های مافیا</h3>
+              <img src="./assets/image/Home Page/shab-haye-mafia-senario-cover.jpeg" alt="" class="col-10" />
             </div>
-            <div class="col-12 py-4">
-              <a href="#takavar" onclick="GameScenariosPage()">
-                <h3 class="col-10 py-2">سناریو تکاور</h3>
-                <img src="./assets/image/Home Page/takavar-senario-cover.JPG" alt="" class="col-10" />
-              </a>
+
+            <div class="col-12 py-4" onclick="GameScenariosPage('takavar')">
+              <h3 class="col-10 py-2">سناریو تکاور</h3>
+              <img src="./assets/image/Home Page/takavar-senario-cover.JPG" alt="" class="col-10" />
             </div>
-            <div class="col-12 py-4">
-              <a onclick="GameScenariosPage()">
-                <h3 class="col-10 py-2">دیگر سناریو ها...</h3>
-                <img src="./assets/image/Home Page/others-scenario-cover.jpeg" alt="" class="col-10" />
-              </a>
+
+            <div class="col-12 py-4" onclick="GameScenariosPage()">
+              <h3 class="col-10 py-2">دیگر سناریو ها...</h3>
+              <img src="./assets/image/Home Page/others-scenario-cover.jpeg" alt="" class="col-10" />
             </div>
           </div>
 
           <hr />
-          <h3 class="py-4 home-section-details-title">تاریخچه بازی مافیا</h3>
-          <p class="home-section-details-text">
+          <h3 class="py-4 home-game-history-title">تاریخچه بازی مافیا</h3>
+          <p class="home-game-history-text">
             دیمیتری دیویدف از کشور روسیه خالق بازی مافیاست و اولین تاریخچه بازی گروهی مافیا به بهار سال ۱۹۸۶ میلادی برمی‌گردد. زمانی که دیویدف (Dmitry Davidoff) در دانشکده‌ی روانشناسی دانشگاه مسکو
             برای اولین بار، این بازی گروهی جذاب را اجرا کرد. بعد از مدت زمانی کوتاه، بازی مافیا در کل دانشگاه معروف شد. این بازی به کلاس‌های درس، خوابگاه‌ها و حتی اردوهای تابستانی نیز راه یافت. این
             ایده و بازی آنچنان محبوب شد که بلافاصله در مدارس، کافه‌ها، خانه‌ها و کم کم همه جا فراگیر شد و کل روسیه را دربرگرفت. بعد از آن نوبت کشورهای دیگر بود که میزبان اجرای چنین بازی جذابی باشند.
@@ -446,24 +440,24 @@
           <div class="py-4 scenarios-list">
             <h1 class="py-3 m-0 scenarios-list-title">فهرست سناریو ها</h1>
             <ol class="p-0 pe-3">
-              <li class="scenarios-list-item"><a href="#shab-haye-mafia"> سناریو شب های مافیا </a></li>
-              <li class="scenarios-list-item"><a href="#godfather"> سناریو پدرخوانده </a></li>
-              <li class="scenarios-list-item"><a href="#bazpors"> سناریو بازپرس </a></li>
-              <li class="scenarios-list-item"><a href="#takavar"> سناریو تکاور شبکه سلامت </a></li>
-              <li class="scenarios-list-item"><a href="#mozakere"> سناریو مذاکره کننده شبکه سلامت </a></li>
-              <li class="scenarios-list-item"><a href="#saghi"> سناریو ساقی </a></li>
-              <li class="scenarios-list-item"><a href="#natasha"> سناریو ناتاشا </a></li>
-              <li class="scenarios-list-item"><a href="#ravani"> سناریو روانی </a></li>
-              <li class="scenarios-list-item"><a href="#killer"> سناریو کیلر </a></li>
-              <li class="scenarios-list-item"><a href="#joker"> سناریو جوکر </a></li>
-              <li class="scenarios-list-item"><a href="#gambler"> سناریو گمبلر </a></li>
-              <li class="scenarios-list-item"><a href="#roosi"> سناریو مافیا روسی </a></li>
-              <li class="scenarios-list-item"><a href="#shab-mafia"> سناریو شب مافیا </a></li>
-              <li class="scenarios-list-item"><a href="#vestern"> سناریو وسترن </a></li>
-              <li class="scenarios-list-item"><a href="#ghomar-baz"> سناریو قمارباز </a></li>
-              <li class="scenarios-list-item"><a href="#godfather-show"> سناریو گادفادرشو </a></li>
-              <li class="scenarios-list-item"><a href="#hiller-killer"> سناریو هیلر کیلر </a></li>
-              <li class="scenarios-list-item"><a href="#khaen"> سناریو شهروند خائن </a></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('shab-haye-mafia', true)"> سناریو شب های مافیا </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('godfather', true)"> سناریو پدرخوانده </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('bazpors', true)"> سناریو بازپرس </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('takavar', true)"> سناریو تکاور شبکه سلامت </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('mozakere', true)"> سناریو مذاکره کننده شبکه سلامت </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('saghi', true)"> سناریو ساقی </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('natasha', true)"> سناریو ناتاشا </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('ravani', true)"> سناریو روانی </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('killer', true)"> سناریو کیلر </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('joker', true)"> سناریو جوکر </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('gambler', true)"> سناریو گمبلر </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('roosi', true)"> سناریو مافیا روسی </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('shab-mafia', true)"> سناریو شب مافیا </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('vestern', true)"> سناریو وسترن </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('ghomar-baz', true)"> سناریو قمارباز </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('godfather-show', true)"> سناریو گادفادرشو </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('hiller-killer', true)"> سناریو هیلر کیلر </span></li>
+              <li class="scenarios-list-item"><span onclick="GameScenariosPage('khaen', true)"> سناریو شهروند خائن </span></li>
             </ol>
           </div>
 
