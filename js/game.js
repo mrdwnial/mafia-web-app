@@ -246,8 +246,8 @@ function submitPlayersName() {
     });
   } else {
     addPlayerNameInput.parentElement.classList.add("check-input");
-    addPlayerNameInput.focus();
   }
+  addPlayerNameInput.focus();
 }
 
 addPlayerNameBtn.addEventListener("click", function () {
