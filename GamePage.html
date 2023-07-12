@@ -81,60 +81,91 @@
       </nav>
 
       <main class="row py-4 mb-5">
-        <div class="col-12 d-none mb-5 players-list-section">
+        <div class="col-12 mb-5 players-list-section">
           <h1 class="col-12 py-3 game-page-titles">لیست بازیکنان</h1>
 
-          <div class="col-12 py-3 add-player-name-container">
-            <input type="text" autocomplete="off" placeholder="نام بازیکن..." id="addPlayerInput" class="col-10 py-3" />
-            <button type="button">+</button>
-          </div>
-          <div class="col-12 py-3 add-player-number-container">
-            <p class="col-12 play-role-with-number-title">پخش کردن نقش ها با عدد</p>
-            <span class="pb-4">
-              <label for="playRoleWithNumber">تعداد بازیکنان :</label>
-              <input id="playRoleWithNumber" type="number" placeholder="0" min="0" max="30" />
-            </span>
+          <div class="col-12 py-4 add-player-name-container">
+            <input type="text" required autocomplete="off" placeholder="نام بازیکن..." id="addPlayerInput" class="col-10 py-3" />
+            <button type="button" id="addPlayerBtn">+</button>
           </div>
 
-          <div class="col-12 py-4 text-center players-list">
-            <div class="col-10 p-2 my-1 players-list-item">
-              <p class="col-10 players-list-item-text">دانیال</p>
-              <img onclick="removePlayerFromList()" src="./assets/image/Game Page/red-remove-square.svg" class="col-2" alt="red-remove-square" />
+          <div id="playersListContainer" class="col-12 py-4 text-center players-list">
+            <div class="col-10 p-3 my-1 empty-item-text">
+              <p class="col-10">نام بازیکنان را وارد نمایید !</p>
             </div>
           </div>
 
-          <button type="submit" class="col-5 my-4 start-game-btn">شروع</button>
+          <button type="submit" id="startGameBtn" class="col-5 my-4 start-game-btn">شروع</button>
         </div>
 
         <div class="col-12 d-none mb-5 select-scenario-section">
           <h1 class="col-12 py-3 game-page-titles">انتخاب سناریو</h1>
-          <div class="col-11 scenarios-list-container">
-            <ul class="p-0">
-              <li class="scenario-name"><span onclick="shabHayeMafia()"> سناریو شب های مافیا </span></li>
-              <li class="scenario-name"><span onclick="godfather()"> سناریو پدرخوانده </span></li>
-              <li class="scenario-name"><span onclick="bazpors()"> سناریو بازپرس </span></li>
-              <li class="scenario-name"><span onclick="takavar()"> سناریو تکاور شبکه سلامت </span></li>
-              <li class="scenario-name"><span onclick="mozakere()"> سناریو مذاکره کننده شبکه سلامت </span></li>
-              <li class="scenario-name"><span onclick="saghi()"> سناریو ساقی </span></li>
-              <li class="scenario-name"><span onclick="natasha()"> سناریو ناتاشا </span></li>
-              <li class="scenario-name"><span onclick="ravani()"> سناریو روانی </span></li>
-              <li class="scenario-name"><span onclick="killer()"> سناریو کیلر </span></li>
-              <li class="scenario-name"><span onclick="joker()"> سناریو جوکر </span></li>
-              <li class="scenario-name"><span onclick="gambler()"> سناریو گمبلر </span></li>
-              <li class="scenario-name"><span onclick="roosi()"> سناریو مافیا روسی </span></li>
-              <li class="scenario-name"><span onclick="shabmMafia()"> سناریو شب مافیا </span></li>
-              <li class="scenario-name"><span onclick="vestern()"> سناریو وسترن </span></li>
-              <li class="scenario-name"><span onclick="ghomarBaz()"> سناریو قمارباز </span></li>
-              <li class="scenario-name"><span onclick="godFatherShow()"> سناریو گادفادرشو </span></li>
-              <li class="scenario-name"><span onclick="hillerKiller()"> سناریو هیلر کیلر </span></li>
-              <li class="scenario-name"><span onclick="khaen()"> سناریو شهروند خائن </span></li>
-            </ul>
+          <div class="col-11 py-3 scenarios-list-container">
+            <p class="col-12 m-0">بسته به تعداد بازیکنان :</p>
+            <ul class="p-0"></ul>
           </div>
 
           <img src="./assets/image/Game Page/black-mask.jpeg" alt="black mask" class="col-10 my-4 p-0 rounded-5 select-scenario-img" />
         </div>
 
-        <div class="col-12 mb-5 play-role-container">
+        <div class="col-12 d-none mb-5 select-roles-section">
+          <h1 class="col-12 py-3 game-page-titles">نقش ها را انتخاب کنید</h1>
+          <div class="col-12 roles-list-container">
+            <h2 class="col-12 py-1 city-role-title">شهروند</h2>
+            <div class="row gy-3 py-3 roles-container city-roles-container">
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">شهروند</span>
+              </div>
+              <!-- <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">دکتر</span>
+              </div>
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">هانتر</span>
+              </div>
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">خوابگرد</span>
+              </div> -->
+            </div>
+
+            <hr />
+
+            <h2 class="col-12 py-1 mafia-role-title">مافیا</h2>
+            <div class="row gy-3 py-3 roles-container mafia-roles-container">
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">گادفادر</span>
+              </div>
+              <!-- <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">گادفادر</span>
+              </div>
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">گادفادر</span>
+              </div>
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">گادفادر</span>
+              </div> -->
+            </div>
+
+            <hr />
+
+            <h2 class="col-12 py-1 Independent-role-title">مستقل</h2>
+            <div class="row d-none gy-3 py-3 roles-container Independent-roles-container">
+              <!-- <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">نوستراموس</span>
+              </div>
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">نوستراموس</span>
+              </div>
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">نوستراموس</span>
+              </div>
+              <div class="col-4 p-1 role-item">
+                <span class="col-12 p-3">نوستراموس</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 d-none mb-5 play-role-container">
           <h1 class="col-12 py-3 game-page-titles">نقش خود را ببینید</h1>
           <div class="row gy-3 mx-1 show-player-role-container">
             <div class="col-4 p-1 show-player-role-item">
@@ -163,7 +194,11 @@
             <span class="show-play-role-card">
               <h5 class="player-role-side">ساید <span>مافیا</span></h5>
               <h1 class="py-3 player-role-card-title">گادفادر</h1>
-              <p class="px-2 player-role-card-details">درحقیقت همان رئیس مافیاست. در سبک‌های مختلف مافیا، رئیس مافیا یا دن یا گادفادر به عنوان یک مافیا حضور دارد و نقش رهبری و هدایت تیم مافیا را به عهده می‌گیرد. کشته ی هر شب مافیا، که با شور و مشورت مافیاها با هم انتخاب می‌شود، توسط رئیس مافیا به گرداننده اعلام نهایی می‌گردد. جواب استعلام پدرخوانده برای کارآگاه همیشه شهروند است و تعیین شلیک شب از طرف گروه مافیا به عهده اوست.</p>
+              <p class="px-2 player-role-card-details">
+                درحقیقت همان رئیس مافیاست. در سبک‌های مختلف مافیا، رئیس مافیا یا دن یا گادفادر به عنوان یک مافیا حضور دارد و نقش رهبری و هدایت تیم مافیا را به عهده می‌گیرد. کشته ی هر شب مافیا، که با
+                شور و مشورت مافیاها با هم انتخاب می‌شود، توسط رئیس مافیا به گرداننده اعلام نهایی می‌گردد. جواب استعلام پدرخوانده برای کارآگاه همیشه شهروند است و تعیین شلیک شب از طرف گروه مافیا به عهده
+                اوست.
+              </p>
               <img onclick="removePlayerFromList()" src="./assets/image/Game Page/red-remove-square.svg" class="close-player-role-card" alt="red-remove-square" />
             </span>
           </div>

@@ -26,6 +26,13 @@ function toggleMobileMenu() {
   $.body.classList.toggle("disable-scroll");
 }
 
+// Scroll up button
+let scrollUpBtn = $.querySelector(".scroll-up-btn")
+function scrollUpHandler(){
+  $.body.scrollTop = 0
+}
+
+
 // local storage section for last page opened
 let getLastPageName = localStorage.getItem("lastPage");
 if (!getLastPageName) {
@@ -36,6 +43,8 @@ if (!getLastPageName) {
 window.addEventListener("load", function () {
   loaderHandler();
   CloseAllPages();
+  // if(window.location.pathname === "/index.html"){
+  // }
 
   let lastPageFunctionName = window[getLastPageName];
   if (typeof lastPageFunctionName === "function") lastPageFunctionName();

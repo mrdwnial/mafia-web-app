@@ -26,6 +26,9 @@ main .players-list-section .add-player-name-container input {
 main .players-list-section .add-player-name-container input:focus {
   box-shadow: inset 0 0 5px #041c32;
 }
+main .players-list-section .add-player-name-container.check-input input:focus {
+  box-shadow: 3px 3px 10px #ff0000, -1px -1px 6px #ff0000, inset 0 0 5px #041c32;
+}
 
 main .players-list-section .add-player-name-container button {
   cursor: pointer;
@@ -43,51 +46,22 @@ main .players-list-section .add-player-name-container button:active {
   opacity: 0.7;
 }
 
-main .players-list-section .play-role-with-number-title {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #eeb902;
-}
-
-main .players-list-section .add-player-number-container span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .players-list-section .add-player-number-container span input {
-  padding: 0.5em;
-  margin: 0 0.5em;
-  font-weight: 700;
-  border-radius: 20px;
-  color: #041c32;
-  background-color: #e9fff9;
-  text-align: center;
-  transition: 0.4s;
-}
-main .players-list-section .add-player-number-container span input:focus {
-  box-shadow: inset 0 0 5px #041c32;
-}
-
-main .players-list-section .add-player-number-container span label {
-  text-align: center;
-  font-size: 1rem;
-  color: #e9fff9;
-}
-
 main .players-list-section .players-list {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 5px dotted #f66b0e;
+  box-shadow: 0 0 10px #f66b0e, inset 0 0 10px #f66b0e;
+  border: 2px solid #f66b0e;
   border-radius: 20px;
 }
-main .players-list-section .players-list .players-list-item {
+main .players-list-section .players-list .players-list-item,
+main .players-list-section .players-list .empty-item-text {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #eeb902;
+  box-shadow: 0 0 5px #eeb902;
   border-radius: inherit;
 }
 main .players-list-section .players-list .players-list-item img {
@@ -97,7 +71,8 @@ main .players-list-section .players-list .players-list-item img {
 main .players-list-section .players-list .players-list-item img:hover {
   transform: scale(0.9);
 }
-main .players-list-section .players-list .players-list-item .players-list-item-text {
+main .players-list-section .players-list .players-list-item .players-list-item-text,
+main .players-list-section .players-list .empty-item-text p {
   margin: 0 !important;
   font-size: 1.5em;
   font-weight: bold;
@@ -106,6 +81,10 @@ main .players-list-section .players-list .players-list-item .players-list-item-t
   text-overflow: ellipsis;
   color: #041c32;
 }
+main .players-list-section .players-list .empty-item-text p {
+  font-size: 1.3em;
+}
+
 main .players-list-section .start-game-btn {
   cursor: pointer;
   position: relative;
@@ -144,8 +123,9 @@ main .players-list-section .start-game-btn::after {
   border-radius: 50%;
   transform: translateX(-50%);
 }
-main .players-list-section .start-game-btn:hover {
-  box-shadow: 0 0 5px #eeb902, inset 0 0 20px #eeb902;
+
+main .players-list-section .start-game-btn:active {
+  transform: scale(0.9);
 }
 
 main .select-scenario-section {
@@ -159,8 +139,11 @@ main .select-scenario-section .scenarios-list-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
+main .select-scenario-section .scenarios-list-container p {
+  color: #eeb902;
+}
 main .select-scenario-section .scenarios-list-container ul {
   list-style: none;
   color: #e9fff9;
@@ -201,12 +184,65 @@ main .select-scenario-section .scenarios-list-container ul .scenario-name span:h
   color: #eeb902;
 }
 
-main .play-role-container {
+main .select-roles-section .roles-list-container .roles-container .role-item span {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2em;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1.5rem;
+  color: #041c32;
+  background-color: #e9fff9;
+  border-radius: 20px;
+  transition: 0.2s;
 }
-main .play-role-container .show-player-role-container {
+main .select-roles-section .roles-list-container .city-roles-container .role-item span {
+  color: #0fb600;
 }
-main .play-role-container .show-player-role-container .show-player-role-item {
+main .select-roles-section .roles-list-container .city-roles-container .role-item.active span,
+main .select-roles-section .roles-list-container .city-roles-container .role-item span:hover {
+  color: #e9fff9;
+  background-color: #0fb600;
 }
+
+main .select-roles-section .roles-list-container .mafia-roles-container .role-item span {
+  color: #ff0000;
+}
+main .select-roles-section .roles-list-container .mafia-roles-container .role-item.active span,
+main .select-roles-section .roles-list-container .mafia-roles-container .role-item span:hover {
+  color: #e9fff9;
+  background-color: #ff0000;
+}
+
+main .select-roles-section .roles-list-container .Independent-roles-container .role-item span {
+  color: #eeb902;
+}
+main .select-roles-section .roles-list-container .Independent-roles-container .role-item.active span,
+main .select-roles-section .roles-list-container .Independent-roles-container .role-item span:hover {
+  color: #e9fff9;
+  background-color: #eeb902;
+}
+
+main .select-roles-section .roles-list-container h2 {
+  font-family: DanaFaNum-ExtraBold;
+  text-align: center;
+}
+
+main .select-roles-section .roles-list-container .city-role-title {
+  color: #0fb600;
+}
+
+main .select-roles-section .roles-list-container .mafia-role-title {
+  color: #ff0000;
+}
+
+main .select-roles-section .roles-list-container .Independent-role-title {
+  color: #eeb902;
+}
+
 main .play-role-container .show-player-role-container .show-player-role-item span {
   cursor: pointer;
   display: flex;
@@ -251,6 +287,7 @@ main .play-role-container .show-play-role-card-container .show-play-role-card {
   background: #041c32;
   border-radius: 20px;
   box-shadow: 0 0 10px #e9fff9;
+  border: 3px solid #e9fff9;
   transition: 0.4s;
   overflow: hidden;
 }
@@ -309,7 +346,7 @@ main .play-role-container .show-play-role-card-container .show-play-role-card::b
 main .play-role-container .show-play-role-card-container .show-play-role-card::after {
   content: "";
   position: absolute;
-  background: #ffffff59;
+  background: #ffffff6b;
   backdrop-filter: blur(100px);
   box-shadow: inset 0 0 20px #e9fff9;
   inset: 5px;

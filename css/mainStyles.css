@@ -91,7 +91,6 @@ body {
   display: none;
 }
 
-
 @keyframes tap-upper-4 {
   0%,
   50%,
@@ -123,6 +122,7 @@ nav {
 .navbar-container {
   position: relative;
 }
+
 .navbar-logo {
   position: absolute;
   left: 1em;
@@ -140,6 +140,47 @@ nav {
   color: #041c32;
   font-family: DanaFaNum-ExtraBold;
   user-select: none;
+}
+
+.scroll-up-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.2em 0.4em;
+  width: fit-content;
+  height: fit-content;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #f66b0e;
+  box-shadow: 0 0 5px #f66b0e;
+  border-radius: 50% 50% 0 0;
+  animation: show_arrowUp 1s;
+  transform: translate(-50%, -120%);
+}
+.scroll-up-btn span img {
+  width: 2em;
+  height: auto;
+}
+@keyframes show_arrowUp {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes hide_arrowUp {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .mobile-sidebar-icon-toggle {
@@ -201,7 +242,7 @@ nav {
 .sidebarMenu-content {
   margin: 3em 1em;
 }
-.sidebarMenu-content ul{
+.sidebarMenu-content ul {
   padding: 0 !important;
 }
 .sidebarMenu-content ul li {

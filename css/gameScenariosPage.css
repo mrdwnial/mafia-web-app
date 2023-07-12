@@ -46,7 +46,7 @@
   display: none;
 }
 
-.more-details{
+.more-details {
   position: absolute;
   display: block;
   bottom: 0;
@@ -59,13 +59,15 @@
 .more-details-text {
   cursor: pointer;
   width: fit-content;
-  color: #f66b0e;
+  font-weight: bold;
+  color: #e9fff9;
   background-color: #041c32;
   user-select: none;
+  transition: 0.4s;
 }
 .more-details-text:hover,
 .more-details-text:active {
-  color: #f66b0e;
+  color: #ffb200;
 }
 
 .scenarios-details b {
@@ -92,7 +94,7 @@
   display: inline-block;
   user-select: none;
 }
-.last-move-cards h3{
+.last-move-cards h3 {
   font-family: DanaFaNum-ExtraBold;
   color: #f66b0e;
 }
